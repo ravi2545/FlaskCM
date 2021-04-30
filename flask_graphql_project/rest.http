@@ -1,0 +1,43 @@
+@server = localhost:5000
+
+
+###
+GET http://{{server}}/
+
+
+###
+POST http://{{server}}/graphql
+Content-Type: application/json
+X-Request-type: GraphQL
+
+query {
+    getCategories {
+        name
+    }
+}
+
+
+
+###
+GET http://127.0.0.1:5000/mydata
+
+
+# This is Flask-RESTful endpoints
+
+###
+GET http://{{server}}/
+
+###
+GET http://{{server}}/hello
+###
+GET http://{{server}}/ravi/todo1
+
+
+###
+PUT http://{{server}}/ravi/todo1
+Content-Type: application/json
+X-Request-Type: PUT
+
+{
+    "data": "Remember the milk"
+}

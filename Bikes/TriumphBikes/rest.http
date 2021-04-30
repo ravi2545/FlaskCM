@@ -1,0 +1,10 @@
+@server = localhost:5000
+
+###
+GET http://{{server}}/home/Triumph
+
+###
+GET http://{{server}}/
+
+###
+GET http://{{server}}/add_one
